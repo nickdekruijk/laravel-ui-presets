@@ -13,13 +13,8 @@
     }],
     "require": {
         "php": "^7.2.5",
-        "arcanedev/laravel-lang": "^8.0",
-        "barryvdh/laravel-debugbar": "^3.3",
-        "doctrine/dbal": "^2.1",
         "laravel/ui": "^2.0",
-        "nickdekruijk/admin": "^1.7",
-        "nickdekruijk/minify": "^2.1",
-        "nickdekruijk/settings": "^1.0"
+        "nickdekruijk/minify": "^2.1"
     },
     "autoload": {
         "psr-4": {
