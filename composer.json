@@ -1,0 +1,38 @@
+{
+    "name": "nickdekruijk/laravel-ui-presets",
+    "description": "Frontend presets for Laravel",
+    "keywords": ["minify", "css", "sass", "view", "laravel", "preset", "ui", "frontend"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/nickdekruijk/laravel-ui-presets/issues",
+        "source": "https://github.com/nickdekruijk/laravel-ui-presets/sections-preset/"
+    },
+    "authors": [{
+        "name": "Nick de Kruijk",
+        "email": "git@nickdekruijk.nl"
+    }],
+    "require": {
+        "php": "^7.2.5",
+        "arcanedev/laravel-lang": "^8.0",
+        "barryvdh/laravel-debugbar": "^3.3",
+        "doctrine/dbal": "^2.1",
+        "laravel/ui": "^2.0",
+        "nickdekruijk/admin": "^1.7",
+        "nickdekruijk/minify": "^2.1",
+        "nickdekruijk/settings": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NickDeKruijk\\LaravelUIPresets\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NickDeKruijk\\LaravelUIPresets\\PresetsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
