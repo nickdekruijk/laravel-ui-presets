@@ -1,5 +1,5 @@
 # laravel-ui-presets
-Frontend preset for Laravel
+Frontend presets for Laravel
 
 ## Installation
 
