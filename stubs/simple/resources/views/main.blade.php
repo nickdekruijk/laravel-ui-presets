@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{{ @$page->description }}">
     	<title>{{ @$page->html_title }}</title>
-    	{!! Minify::stylesheet(['../resources/css/utility.css', '../resources/css/styles.scss']) !!}
+    	{!! Minify::stylesheet(['../resources/sass/utility.css', '../resources/sass/styles.scss']) !!}
     </head>
     <body class="smooth">
         <input type="checkbox" id="nav-toggle">
@@ -28,8 +28,8 @@
             </section>
             <footer class="footer">
                 <div class="max-width">
-                    &copy; {{ date('Y') }} <a href="https://nickdekruijk.nl">Nick de Kruijk</a>
-                    <a class="right" target="_blank" href="https://github.com/nickdekruijk">Visit me on GitHub</a>
+                    &copy; {{ date('Y') }} <a href="https://nickdekruijk.nl" target="_blank">Nick de Kruijk</a>
+                    <a href="https://github.com/nickdekruijk" target="_blank" class="f-right">Visit me on GitHub</a>
                 </div>
             </footer>
         </div>
