@@ -1,4 +1,4 @@
-# sections-preset
+# laravel-ui-presets
 Frontend preset for Laravel
 
 ## Installation
@@ -6,6 +6,6 @@ Frontend preset for Laravel
 To install the preset in a fresh Laravel application, simply run the following commands:
 
 ```bash
-composer require nickdekruijk/sections-preset
-php artisan ui nick-sections
+composer require nickdekruijk/laravel-ui-presets
+php artisan ui preset-sections
 ```
