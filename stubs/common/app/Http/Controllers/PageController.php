@@ -12,7 +12,7 @@ use View;
 class PageController extends Controller
 {
     // This array will store all pages store with parent as key
-    public $tree = [];
+    private $tree = [];
 
     // $nav will contain the html for the navigation menu (nested <ul><li>)
     public $nav = '';
@@ -98,13 +98,16 @@ class PageController extends Controller
         if (!$hidden) $this->nav .= '</ul>';
     }
 
-    public function getTree()
+    public function getTree($id = null)
     {
-        foreach (Page::where('active', 1)->orderBy('sort')->get() as $page) {
-            $this->tree[$page->parent ?: 0][$page->id] = $page;
-            $this->tree['parents'][$page->id] = (int) $page->parent ?: 0;
-            $this->tree['slugs'][$page->id] = $page->slug;
+        if (!$this->tree) {
+            foreach (Page::where('active', 1)->orderBy('sort')->get() as $page) {
+                $this->tree[$page->parent ?: 0][$page->id] = $page;
+                $this->tree['parents'][$page->id] = (int) $page->parent ?: 0;
+                $this->tree['slugs'][$page->id] = $page->slug;
+            }
         }
+        return $id ? $this->tree[$id] : $this->tree;
     }
 
     public function getPage($id)
