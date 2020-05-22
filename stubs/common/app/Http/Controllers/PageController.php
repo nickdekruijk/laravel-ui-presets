@@ -24,6 +24,13 @@ class PageController extends Controller
     private $baseUrl = null;
     private $segments = null;
 
+    public function __construct()
+    {
+        if (App::getLocale() == 'nl') {
+            setlocale(LC_TIME, 'nl_NL');
+        }
+    }
+
     public function parseSegments()
     {
         $this->segments = Request::segments();
@@ -38,9 +45,6 @@ class PageController extends Controller
                 }
             }
             $this->translate = true;
-        }
-        if (App::getLocale() == 'nl') {
-            setlocale(LC_TIME, 'nl_NL');
         }
     }
 
