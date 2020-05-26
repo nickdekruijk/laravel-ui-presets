@@ -17,6 +17,16 @@ class Page extends Model
         'date' => 'date',
     ];
 
+    /**
+     * If model is multilanguage you can define it here. PageController will use this to select the proper columns
+     * For example:
+     * public static $languages = [
+     *     'nl' => '',     // Locale => database column suffix
+     *     'en' => '_en',
+     * ];
+     */
+    public static $languages;
+
     // If slug is empty create slug based on title
     public function getSlugAttribute($value)
     {
