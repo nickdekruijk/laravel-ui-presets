@@ -161,4 +161,18 @@ class PageController extends Controller
 
         return view($this->current->view, ['page' => $this->current, 'PageController' => $this]);
     }
+
+    /**
+     * Get a row from slug in model and return it as a view
+     * In web.php routes file use:
+     * Route::get('modelname/{slug}', 'PageController@modelname')->name('modelname');
+     */
+    public function modelname($slug)
+    {
+        $page = Film::active()->get()->filter(function ($item) use ($slug) {
+            return $item->slug === $slug;
+        })->first();
+        abort_if(!$page, 404);
+        return view('modelname', ['page' => $page]);
+    }
 }
