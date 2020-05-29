@@ -54,4 +54,16 @@ class Page extends Model
     {
         return $value ?: 'page';
     }
+
+    // Return background-image style for the first image if present
+    public function getImageStyleAttribute($value)
+    {
+        return $value ?: ($this->images ? "background-image:url('" . asset('media/' . $this->image()) . "')" : '');
+    }
+
+    // Return background-image style for the first background image if present
+    public function getBackgroundStyleAttribute($value)
+    {
+        return $value ?: ($this->background ? "background-image:url('" . asset('media/' . $this->image('background')) . "')" : '');
+    }
 }
