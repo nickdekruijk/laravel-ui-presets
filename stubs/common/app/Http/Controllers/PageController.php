@@ -166,10 +166,11 @@ class PageController extends Controller
      * Get a row from slug in model and return it as a view
      * In web.php routes file use:
      * Route::get('modelname/{slug}', 'PageController@modelname')->name('modelname');
+     * Don't forget to add: use App\ModelName;
      */
     public function modelname($slug)
     {
-        $page = Film::active()->get()->filter(function ($item) use ($slug) {
+        $page = ModelName::active()->get()->filter(function ($item) use ($slug) {
             return $item->slug === $slug;
         })->first();
         abort_if(!$page, 404);
