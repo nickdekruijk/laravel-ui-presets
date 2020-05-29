@@ -9,7 +9,7 @@
     	<title>{{ $page->html_title ?? config('app.name') }}</title>
     	{!! Minify::stylesheet(['../resources/sass/utility.css', '../resources/sass/styles.scss']) !!}
     </head>
-    <body class="smooth">
+    <body class="smooth{{ ($page->slug ?? null) === '' ? ' home' : '' }}">
         <input type="checkbox" id="nav-toggle">
         <nav class="nav" aria-label="main navigation" id="nav">
             <div class="max-width">
