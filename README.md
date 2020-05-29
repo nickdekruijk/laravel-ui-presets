@@ -20,5 +20,6 @@ Then select one of the presets (preset-none is always ran before one of the othe
 
 ```bash
 php artisan ui preset-none
+php artisan ui preset-simple
 php artisan ui preset-sections
 ```
