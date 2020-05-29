@@ -143,7 +143,7 @@ class PageController extends Controller
 
     /**
      * Controller method for Route creation
-     * In routes.php / web.php use:
+     * In web.php routes file use:
      * Route::get('{any}', 'PageController@route')->where('any', '(.*)');
      */
     public function route($any = null)
