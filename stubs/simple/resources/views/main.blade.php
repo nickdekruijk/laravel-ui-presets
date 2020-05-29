@@ -5,8 +5,8 @@
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{{ @$page->description }}">
-    	<title>{{ @$page->html_title }}</title>
+        <meta name="description" content="{{ $page->description ?? '' }}">
+    	<title>{{ $page->html_title ?? config('app.name') }}</title>
     	{!! Minify::stylesheet(['../resources/sass/utility.css', '../resources/sass/styles.scss']) !!}
     </head>
     <body class="smooth">
@@ -19,7 +19,7 @@
                     <span></span>
                     <span></span>
                 </label>
-                {!! isset($PageController) ? $PageController->nav : Page::navigation() !!}
+                {!! ($PageController ?? new App\Http\Controllers\PageController)->navigation() !!}
             </div>
         </nav>
         <div class="flex has-footer">
