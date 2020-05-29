@@ -68,7 +68,7 @@ class PageController extends Controller
     {
         if (!$this->nav) {
             $this->getTree();
-            $this->walk();
+            $this->walk(0, 0, $this->segments(), $this->baseUrl() . '/');
         }
         return $this->nav;
     }
