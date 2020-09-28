@@ -44,7 +44,7 @@ class PresetsServiceProvider extends ServiceProvider
     public static function addPageControllerRoute()
     {
         self::updateFile(base_path('routes/web.php'), function ($file) {
-            $route = "Route::get('{any}', 'PageController@route')->where('any', '(.*)');\n";
+            $route = "Route::get('{any}', 'App\Http\Controllers\PageController@route')->where('any', '(.*)');\n";
             if (strpos($file, $route) === false) {
                 return $file .= $route;
             } else {
