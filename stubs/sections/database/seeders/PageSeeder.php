@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use App\Page;
@@ -25,12 +27,11 @@ class PageSeeder extends Seeder
         $faker = Faker::create();
 
         Page::truncate();
-        Page::create(['body' => lorem($faker), 'title' => 'Home', 'slug' => '/']);
+        $home = Page::create(['title' => 'Home', 'slug' => '/', 'view' => 'sections']);
+        Page::create(['body' => lorem($faker), 'parent' => $home->id, 'view' => 'sections.default', 'title' => 'Section A', 'menuitem' => false]);
+        Page::create(['body' => lorem($faker), 'parent' => $home->id, 'view' => 'sections.default', 'title' => 'Section B', 'menuitem' => false]);
+        Page::create(['body' => lorem($faker), 'parent' => $home->id, 'view' => 'sections.default', 'title' => 'Section C', 'menuitem' => false]);
         Page::create(['body' => lorem($faker), 'title' => 'About']);
-        $products = Page::create(['body' => lorem($faker), 'title' => 'Products']);
-        Page::create(['body' => lorem($faker), 'parent' => $products->id, 'title' => 'Product A', 'menuitem' => false, 'home' => true]);
-        Page::create(['body' => lorem($faker), 'parent' => $products->id, 'title' => 'Product B', 'menuitem' => false]);
-        Page::create(['body' => lorem($faker), 'parent' => $products->id, 'title' => 'Product C', 'menuitem' => false]);
         Page::create(['body' => lorem($faker), 'title' => 'Contact']);
     }
 }
