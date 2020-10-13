@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Route;
 use Request;
 use App\Http\Requests;
-use App\Page;
+use App\Models\Page;
 use App;
 use View;
 
