@@ -11,6 +11,9 @@ class NonePreset extends Preset
     {
         $filesystem = new Filesystem();
 
+        // Delete css directory
+        $filesystem->deleteDirectory(resource_path('css'));
+
         // Empty sass directory
         $filesystem->deleteDirectory(resource_path('sass'));
         $filesystem->makeDirectory(resource_path('sass'));
