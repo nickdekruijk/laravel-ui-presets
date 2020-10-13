@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Route;
 use Request;
-use App\Http\Requests;
 use App\Models\Page;
 use App;
-use View;
 
 class PageController extends Controller
 {
