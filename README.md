@@ -1,9 +1,11 @@
 # laravel-ui-presets
 Frontend presets for Laravel
 
-## Warning
+## Disclaimer
 **Do not use this package in existing applications, it will delete css/sass/js resources, remove welcome view and change routes.**
 Only use after a fresh laravel install.
+
+This package uses semantic versioning so just running composer update won't break your application but installing a preset may function very different from previous minor versions so use with caution.
 
 ## Installation
 
