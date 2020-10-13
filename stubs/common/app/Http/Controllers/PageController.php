@@ -15,7 +15,7 @@ class PageController extends Controller
     public $nav = '';
 
     // $current will contain the current page if found
-    public $current = false;
+    public $current;
 
     private $translate = false;
     private $baseUrl = null;
