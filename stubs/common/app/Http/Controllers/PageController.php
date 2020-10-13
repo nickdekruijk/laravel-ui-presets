@@ -141,7 +141,7 @@ class PageController extends Controller
     /**
      * Controller method for Route creation
      * In web.php routes file use:
-     * Route::get('{any}', 'PageController@route')->where('any', '(.*)');
+     * Route::get('{any}', 'App\Http\Controllers\PageController@route')->where('any', '(.*)');
      */
     public function route($any = null)
     {
@@ -162,8 +162,8 @@ class PageController extends Controller
     /**
      * Get a row from slug in model and return it as a view
      * In web.php routes file use:
-     * Route::get('modelname/{slug}', 'PageController@modelname')->name('modelname');
-     * Don't forget to add: use App\ModelName;
+     * Route::get('modelname/{slug}', 'App\Http\Controllers\PageController@modelname')->name('modelname');
+     * Don't forget to add: use App\Models\ModelName;
      */
     public function modelname($slug)
     {
