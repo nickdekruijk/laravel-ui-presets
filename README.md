@@ -1,6 +1,10 @@
 # laravel-ui-presets
 Frontend presets for Laravel
 
+## Warning
+**Do not use this package in existing applications, it will delete css/sass/js resources, remove welcome view and change routes.**
+Only use after a fresh laravel install.
+
 ## Installation
 
 To install the presets in a fresh Laravel application, simply run the following command:
