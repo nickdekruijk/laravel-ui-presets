@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
-use App\Page;
+use App\Models\Page;
 
 class PageSeeder extends Seeder
 {
