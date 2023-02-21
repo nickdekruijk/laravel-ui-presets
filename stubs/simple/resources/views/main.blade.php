@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{{ $page->description ?? '' }}">
     	<title>{{ $page->html_title ?? config('app.name') }}</title>
-    	{!! Minify::stylesheet(['../resources/sass/utility.css', '../resources/sass/styles.scss']) !!}
+    	{!! Minify::stylesheet(['utility.css', 'styles.scss']) !!}
     </head>
     <body class="smooth{{ ($page->slug ?? null) === '' ? ' home' : '' }}">
         <input type="checkbox" id="nav-toggle">
@@ -33,6 +33,6 @@
                 </div>
             </footer>
         </div>
-        {!! Minify::javascript(['../resources/js/scripts.js']) !!}
+        {!! Minify::javascript(['scripts.js']) !!}
     </body>
 </html>
